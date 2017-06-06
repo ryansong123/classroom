@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC   
+     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"   
+     "http://struts.apache.org/dtds/struts-2.0.dtd">
+     
+     
+<struts>
+    <package name="lunwen186" extends="struts-default">
+        <global-results>
+            <result name="succeed">/common/succeed.jsp</result>
+            <result name="successAdd">/common/add_success.jsp</result>
+            <result name="successDel">/common/del_success.jsp</result>
+            <result name="successUpdate">/common/update_success.jsp</result>
+            <result name="msg">/common/msg.jsp</result>
+        </global-results>
+        
+        <action name="upload" class="com.util.upload" method="upload">
+             <result name="success">/upload/upload_re.jsp</result>
+        </action>
+        
+        <action name="adminAdd" class="adminAction" method="adminAdd">
+        </action>
+        <action name="adminDel" class="adminAction" method="adminDel">
+        </action>
+        <action name="adminManage" class="adminAction" method="adminManage">
+            <result name="success">/admin/index/adminManage.jsp</result>
+        </action>
+        <action name="adminEdit" class="adminAction" method="adminEdit"> 
+        </action>
+        <action name="admintById" class="adminAction" method="admintById"> 
+            <result name="success">/admin/admin/adminEdit.jsp</result>
+        </action>
+        
+        <action name="userAdd" class="userAction" method="userAdd">
+        </action>
+        <action name="userDel" class="userAction" method="userDel">
+        </action>
+        <action name="userMana" class="userAction" method="userMana">
+            <result name="success">/admin/user/userMana.jsp</result>
+        </action>
+        <action name="userQuanxian" class="userAction" method="userQuanxian">
+        </action>
+        
+        <action name="classroomAdd" class="classroomAction" method="classroomAdd">
+            <result name="success">/admin/classroom/classroomMana.jsp</result>
+        </action>
+        <action name="classroomMana" class="classroomAction" method="classroomMana">
+            <result name="success">/admin/classroom/classroomMana.jsp</result>
+        </action>
+        <action name="classroomBorrowMana" class="classroomAction" method="classroomBorrowMana">
+            <result name="success">/admin/classroom/classroomBorrowMana.jsp</result>
+        </action>
+         <action name="classroomDel" class="classroomAction" method="classroomDel">
+        </action>
+        
+        <action name="borrowlogMana" class="borrowlogAction" method="borrowlogMana">
+            <result name="success">/admin/borrow/borrowlogMana.jsp</result>
+        </action>
+         <action name="borrowlogMana2" class="borrowlogAction" method="borrowlogMana2">
+            <result name="success">/admin/borrow/borrowlogMana.jsp</result>
+        </action>
+        <action name="borrowlogUpdate" class="borrowlogAction" method="borrowlogUpdate">
+            <result name="success">/admin/borrow/borrowlogMana.jsp</result>
+        </action>
+        <action name="borrowlogAdd" class="borrowlogAction" method="borrowlogAdd">
+             <!-- <result name="success">/admin/borrow/borrowlogMana.jsp</result> -->
+        </action>
+        <action name="borrowlogNew" class="borrowlogAction" method="borrowlogNew">
+              <result name="success">/admin/borrow/borrowlogAdd.jsp</result> 
+        </action>
+        <action name="borrowlogView" class="borrowlogAction" method="borrowlogView">
+            <result name="success">/admin/borrow/borrowlogMana.jsp</result>
+        </action>
+        <!--  <action name="borrowDel" class="borrowlogAction" method="borrowDel">
+        </action> -->
+    </package>
+</struts>
